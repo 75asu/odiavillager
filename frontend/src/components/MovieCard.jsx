@@ -1,4 +1,4 @@
-import { ClockIcon, EpisodeIcon, EyeIcon, PlaySvg } from "@/assets/Svgs";
+import { ClockIcon, EpisodeIcon, EyeIcon, PlaySvg } from "@/assets/Svgs.jsx";
 import Link from "next/link";
 import StarRating from "./common/StarRating";
 import Image from "next/image";
@@ -12,11 +12,11 @@ const MovieCard = ({ id, special, series, image, title, view, duration, episodes
             <div>
                 <Link href={series ? `/series/${id}` : `/movies/${id}`}>
                 <Image
-                width={288}
-                height={432}
-                src={image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
-                alt={title}
-                className="rounded-xl w-full aspect-thumbnail object-contain bg-black"
+                    width={288}
+                    height={432}
+                    src={image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
+                    alt={title}
+                    className="rounded-xl w-full aspect-thumbnail object-contain bg-black"
                 />
                 </Link>
                 <Link href={series ? `/series/${id}` : `/movies/${id}`}>

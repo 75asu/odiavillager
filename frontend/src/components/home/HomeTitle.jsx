@@ -1,5 +1,6 @@
 "use client"
-import { PlaySvg } from "@/assets/Svgs";
+
+import { PlaySvg } from "@/assets/Svgs.jsx";
 import Link from "next/link";
 
 const HomeTitle = () => {
@@ -11,7 +12,7 @@ const HomeTitle = () => {
                 className="text-c-grey-60 text-center 3xl:text-super-base lg:text-sm md:text-sm text-xs mb-5 
           mx-auto xl:w-3/5 md:w-3/4 max-md:px-10 max-sm:px-5"
             >
-                Coolest Odia Content At One Place <br />
+                Not all content...only selective, cool Odia content made with modern film-making <br />
 
             </p>
             <Link href="/movies">

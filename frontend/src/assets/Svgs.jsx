@@ -52,7 +52,6 @@ export const SmartPhoneSvg = (props) => {
     )
 }
 
-
 export const SmartTvSvg = (props) => {
     return (
         <svg
@@ -109,7 +108,6 @@ export const TabletSvg = (props) => {
     )
 }
 
-
 export const LaptopSvg = (props) => {
     return (
         <svg
@@ -138,8 +136,6 @@ export const LaptopSvg = (props) => {
     )
 }
 
-
-
 export const GameConsoleSvg = (props) => {
     return (
         <svg
@@ -167,7 +163,6 @@ export const GameConsoleSvg = (props) => {
         </svg>
     )
 }
-
 
 export const VrHeadsetSvg = (props) => {
     return (
@@ -417,7 +412,6 @@ export const ClockIcon = (props) => {
     )
 }
 
-
 export const EyeIcon = (props) => {
     return (
         <svg {...props} width="25" height="24" style={{ display: "inline" }} viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -427,8 +421,6 @@ export const EyeIcon = (props) => {
     )
 }
 
-
-
 export const HomeIcon = (props) => {
     return (
         <svg {...props} width="22" height="21" viewBox="0 0 22 21" className="inline" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -436,7 +428,6 @@ export const HomeIcon = (props) => {
         </svg>
     )
 }
-
 
 export const UserPlusOIcon = (props) => {
     return (
