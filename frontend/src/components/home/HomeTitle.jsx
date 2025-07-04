@@ -14,7 +14,7 @@ const HomeTitle = () => {
                 Coolest Odia Content At One Place <br />
 
             </p>
-            <Link href="/explore">
+            <Link href="/movies">
                 <button
                     className="bg-c-red-45 text-white xl:px-6 md:px-4 px-3 xl:py-2.5 md:py-2 py-1.5 rounded-lg md:text-sm text-super-xs flex items-center gap-2 mx-auto"
                 >

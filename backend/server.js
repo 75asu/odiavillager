@@ -35,7 +35,7 @@ app.use("/public", express.static(path.join(__dirname, "public", "trailer")));
 app.use("/public", express.static(path.join(__dirname, "public", "videos")));
 
 //! Routes
-app.use('/api/user', require('./router/userRoutes'));
+// app.use('/api/user', require('./router/userRoutes'));
 app.use('/api/movie', require('./router/movieRoutes'));
 app.use('/api/series', require('./router/seriesRoutes'));
 app.use('/api/actor', require('./router/actorRoutes'));

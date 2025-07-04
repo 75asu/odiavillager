@@ -12,10 +12,10 @@ const NavbarNav = ({ pathname }) => {
                         className={`3xl:px-6 3xl:py-3 lg:px-4 px-2.5 py-2 ${pathname === "/" && "bg-c-black-10 rounded font-medium"}`}>
                         <Link href="/">Home</Link>
                     </li>
-                    <li
+                    {/* <li
                         className={`3xl:px-6 3xl:py-3 lg:px-4 px-2.5 py-2 ${pathname === "/explore" && "bg-c-black-10 rounded font-medium"}`}>
                         <Link href="/explore">Explore</Link>
-                    </li>
+                    </li> */}
                     <li
                         className={`3xl:px-6 3xl:py-3 lg:px-4 px-2.5 py-2 ${pathname === "/movies" && "bg-c-black-10 rounded font-medium"}`}>
                         <Link href="/movies">Movies</Link>
@@ -24,14 +24,14 @@ const NavbarNav = ({ pathname }) => {
                         className={`3xl:px-6 3xl:py-3 lg:px-4 px-2.5 py-2 ${pathname === "/series" && "bg-c-black-10 rounded font-medium"}`}>
                         <Link href="/series">Series</Link>
                     </li>
-                    <li
+                    {/* <li
                         className={`3xl:px-6 3xl:py-3 lg:px-4 px-2.5 py-2 ${pathname === "/support" && "bg-c-black-10 rounded font-medium"}`}>
                         <Link href="/support">Support</Link>
-                    </li>
-                    <li
+                    </li> */}
+                    {/* <li
                         className={`3xl:px-6 3xl:py-3 lg:px-4 px-2.5 py-2 ${pathname === "/subscriptions" && "bg-c-black-10 rounded font-medium"}`}>
                         <Link href="/subscriptions">Subscriptions</Link>
-                    </li>
+                    </li> */}
                 </ul >
             </div >
 

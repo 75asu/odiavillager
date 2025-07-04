@@ -10,13 +10,13 @@ const SeriesPage = () => {
 
             <GenresSection />
 
-            <TopSeriesSection />
+            {/* <TopSeriesSection />
 
             <TrendingSeriesSection />
 
             <NewReleasedSection />
 
-            <PopularSeriesSection />
+            <PopularSeriesSection /> */}
 
         </main>
     );

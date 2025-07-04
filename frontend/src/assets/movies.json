@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "1",
+    "title": "DAMaN",
+    "duration": "179",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/18/DAMaN_movie_poster.jpeg",
+    "views": 15000,
+    "rate": 4.3
+  },
+  {
+    "_id": "2",
+    "title": "Malyagiri: Kahani Aarambha",
+    "duration": "168",
+    "thumbnail": "https://media.themoviedb.org/t/p/original/eap4ESFRtoQj4eiqO6wyNHxllmi.jpg",
+    "views": 25000,
+    "rate": 4.7
+  },
+  {
+    "_id": "3",
+    "title": "Pabar",
+    "duration": "182",
+    "thumbnail": "https://media.themoviedb.org/t/p/original/lD3NASwElTFTzgsmw7m9eqGt6Hs.jpg",
+    "views": 30000,
+    "rate": 4.8
+  },
+  {
+    "_id": "4",
+    "title": "Bou Buttu Bhuta",
+    "duration": "182",
+    "thumbnail": "https://media.themoviedb.org/t/p/original/eh3PGp2b9cEb16vv65jyLEtHqrU.jpg",
+    "views": 30000,
+    "rate": 4.8
+  },
+  {
+    "_id": "5",
+    "title": "Kuhudi",
+    "duration": "182",
+    "thumbnail": "https://media.themoviedb.org/t/p/original/9o4MHDcQfGTwdhLqIiNnQ9isqDV.jpg",
+    "views": 30000,
+    "rate": 4.8
+  },
+  {
+    "_id": "6",
+    "title": "Dasama",
+    "duration": "182",
+    "thumbnail": "https://media.themoviedb.org/t/p/original/pi43R3AhR26JzLtHNMmkp1E8IP5.jpg",
+    "views": 30000,
+    "rate": "9.1/10 By 242"
+  }
+]

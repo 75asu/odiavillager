@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
+import { useState, useEffect } from "react";
 import { SpinnerSvg } from "@/assets/Svgs";
 import MovieCard from "@/components/MovieCard";
 import MovieCardSkeleton from "@/components/MovieCardSkeleton";
@@ -9,20 +8,16 @@ import moviesData from "@/assets/movies.json"; // Adjust path if needed
 
 const AllMoviesPage = () => {
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const effectRan = useRef(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!effectRan.current) {
-            setLoading(true);
-            // Simulate API fetch delay
-            setTimeout(() => {
-                setMovies(moviesData);
-                setLoading(false);
-            }, 500); // Adjust/remove as needed
+        // Simulate fetch delay to show skeletons nicely
+        const timer = setTimeout(() => {
+            setMovies(moviesData);
+            setLoading(false);
+        }, 500);
 
-            effectRan.current = true;
-        }
+        return () => clearTimeout(timer);
     }, []);
 
     return (

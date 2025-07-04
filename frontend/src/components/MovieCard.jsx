@@ -14,7 +14,9 @@ const MovieCard = ({ id, special, series, image, title, view, duration, episodes
                     <Image
                         width={288}
                         height={432}
-                        src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
+                        // src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
+                        src={image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
+
                         alt={title}
                         className="rounded-xl w-full aspect-thumbnail object-cover object-top"
                     />

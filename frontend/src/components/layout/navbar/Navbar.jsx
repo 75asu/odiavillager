@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import NavbarNav from "./NavbarNav";
 import NotificationButton from "./NotificationButton";
 import useUserStore from "@/stores/useUserStore";
-import SearchBox from "@/components/search/SearchBox";
+// import SearchBox from "@/components/search/SearchBox";
 
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
                 <NavbarNav pathname={pathname} />
 
                 <div className="flex items-center gap-4">
-                    <SearchBox />
+                    {/* <SearchBox /> */}
                     {loading ? <div className="3xl:w-[5rem] w-[4.1rem] h-1" ></div> : !loading && user ?
                         <>
                             <Link href="/profile" className="relative">

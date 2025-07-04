@@ -1,7 +1,7 @@
 "use client"
 
 import useUserStore from "@/stores/useUserStore";
-import Footer from "./footer/Footer";
+// import Footer from "./footer/Footer";
 import Navbar from "./navbar/Navbar";
 
 const MainLayout = ({ children }) => {
@@ -15,7 +15,7 @@ const MainLayout = ({ children }) => {
             <div className="min-h-screen bg-c-black-08 -z-40">
                 {children}
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

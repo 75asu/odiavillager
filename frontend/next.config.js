@@ -3,6 +3,12 @@ module.exports = {
         missingSuspenseWithCSRBailout: false,
     },
     images: {
-        domains: ['streamvibe-backend.liara.run'],
+        domains: ['odiavillager.vercel.app'],
+        remotePatterns: [
+        {
+            protocol: 'https',
+            hostname: '**',
+        },
+    ],
     },
 }
