@@ -1,46 +1,24 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
+import { useState, useEffect } from "react";
 import { SpinnerSvg } from "@/assets/Svgs";
 import MovieCard from "@/components/MovieCard";
 import MovieCardSkeleton from "@/components/MovieCardSkeleton";
-import moviesData from "@/assets/movies.json";
+import moviesData from "@/assets/movies.json"; // Adjust path if needed
 
 const AllMoviesPage = () => {
     const [movies, setMovies] = useState([]);
-    const [page, setPage] = useState(1);
-    const [hasNextPage, setHasNextPage] = useState(true);
-    const [loading, setLoading] = useState(false);
-    const effectRan = useRef(false);
-
-    const itemsPerPage = 5; // adjust based on your desired page size
-
-    const fetchMovies = (currentPage) => {
-        setLoading(true);
-        // Simulate API fetch delay
-        setTimeout(() => {
-            const startIndex = (currentPage - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-            const newMovies = moviesData.slice(startIndex, endIndex);
-
-            setMovies((prevMovies) => [...prevMovies, ...newMovies]);
-            setHasNextPage(endIndex < moviesData.length);
-            setLoading(false);
-        }, 500);
-    };
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!effectRan.current) {
-            fetchMovies(page);
-            effectRan.current = true;
-        }
-    }, [page]);
+        // Simulate fetch delay to show skeletons nicely
+        const timer = setTimeout(() => {
+            setMovies(moviesData);
+            setLoading(false);
+        }, 500);
 
-    const loadMore = () => {
-        setPage((prevPage) => prevPage + 1);
-        fetchMovies(page + 1);
-    };
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <main className="container lg:py-20 py-12">
@@ -54,47 +32,31 @@ const AllMoviesPage = () => {
                 </h1>
 
                 <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8 mt-10">
-                    {!loading && movies.length > 0 ? (
-                        movies.map(({ _id, title, duration, thumbnail, views, rate }) => (
-                            <MovieCard
-                                special
-                                key={_id}
-                                id={_id}
-                                title={title}
-                                image={thumbnail}
-                                duration={duration}
-                                view={views}
-                                rate={rate}
-                            />
-                        ))
-                    ) : !loading && movies.length === 0 ? (
-                        <div className="flex justify-center mt-10">
-                            <h1 className="text-white">No Movies Found</h1>
-                        </div>
+                    {!loading ? (
+                        movies.length > 0 ? (
+                            movies.map(({ _id, title, duration, thumbnail, views, rate }) => (
+                                <MovieCard
+                                    special
+                                    key={_id}
+                                    id={_id}
+                                    title={title}
+                                    image={thumbnail}
+                                    duration={duration}
+                                    view={views}
+                                    rate={rate}
+                                />
+                            ))
+                        ) : (
+                            <div className="flex justify-center mt-10">
+                                <h1 className="text-white">No Movies Found</h1>
+                            </div>
+                        )
                     ) : (
-                        Array.from({ length: itemsPerPage }).map((_, index) => (
+                        Array.from({ length: 12 }).map((_, index) => (
                             <MovieCardSkeleton special key={index} />
                         ))
                     )}
                 </div>
-
-                {hasNextPage && (
-                    <div className="flex justify-center mt-10">
-                        <button
-                            onClick={loadMore}
-                            className="bg-c-red-45 text-white font-medium px-4 py-2 rounded-lg flex items-center gap-2"
-                            disabled={loading}
-                        >
-                            {loading ? 'Loading' : 'Load More'}
-                            {loading && (
-                                <div role="status">
-                                    <SpinnerSvg />
-                                    <span className="sr-only">Loading...</span>
-                                </div>
-                            )}
-                        </button>
-                    </div>
-                )}
             </div>
         </main>
     );
