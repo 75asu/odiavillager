@@ -11,15 +11,13 @@ const MovieCard = ({ id, special, series, image, title, view, duration, episodes
         >
             <div>
                 <Link href={series ? `/series/${id}` : `/movies/${id}`}>
-                    <Image
-                        width={288}
-                        height={432}
-                        // src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
-                        src={image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
-
-                        alt={title}
-                        className="rounded-xl w-full aspect-thumbnail object-cover object-top"
-                    />
+                <Image
+                width={288}
+                height={432}
+                src={image.startsWith('http') ? image : `${process.env.NEXT_PUBLIC_IMAGE_URL}/${image}`}
+                alt={title}
+                className="rounded-xl w-full aspect-thumbnail object-contain bg-black"
+                />
                 </Link>
                 <Link href={series ? `/series/${id}` : `/movies/${id}`}>
                     <h3
