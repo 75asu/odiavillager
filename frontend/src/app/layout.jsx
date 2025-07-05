@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const appName = "StreamVibe - Watch and Discover Movies & TV Shows Online";
+const appName = "Odia Villager";
 const appDesc = "StreamVibe: Watch and download the latest movies and TV series from around the world in high quality. Enjoy a vast library of diverse genres, with subtitles and dubbed options. StreamVibe offers the ultimate streaming experience for movie and series enthusiasts.";
 
 export const metadata = {

@@ -23,7 +23,21 @@ const Navbar = () => {
         "></div>
             <div className="container flex items-center justify-between">
                 <Link href="/">
-                    <img src="/images/logo-white.png" alt="StreamVibe" className="3xl:w-full lg:w-[165px] w-[150px]" />
+                    <div className="flex items-center gap-2">
+                        {/* Animated logo */}
+                        <div className="relative flex items-center justify-center w-12 h-12">
+                        {/* Outer rotating dual ring */}
+                        <div className="w-12 h-12 border-4 rounded-full border-t-red-600 border-b-white border-l-transparent border-r-transparent animate-spin" style={{ animationDuration: "1.5s" }}></div>
+
+                        {/* Play icon with pulse */}
+                        <div className="absolute animate-pulse">
+                            <div className="w-0 h-0 border-t-4 border-b-4 border-l-6 border-t-transparent border-b-transparent border-l-white"></div>
+                        </div>
+                        </div>
+
+                        <span className="text-lg font-semibold text-white">Odia Villager</span>
+                    </div>
+
                 </Link>
 
                 <NavbarNav pathname={pathname} />
@@ -48,7 +62,7 @@ const Navbar = () => {
                     }
 
                     <button
-                        className="w-11 h-11 rounded-lg btn-black-10 border border-c-black-15 md:hidden flex justify-center items-center "
+                        className="flex items-center justify-center border rounded-lg w-11 h-11 btn-black-10 border-c-black-15 md:hidden "
                     >
                         <MenuSvg />
                     </button>

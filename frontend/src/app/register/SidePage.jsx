@@ -34,12 +34,12 @@ const SidePage = ({ page, setPage }) => {
             className={`w-[50%] h-full absolute transition-transform duration-700 bg-[url('/images/header-banner.jpg')] bg-cover bg-center overflow-hidden
          ${page == "login" ? "transform-none" : "translate-x-full"}`}
         >
-            <div className="w-full h-full bg-c-black-06/65 px-14 py-8">
+            <div className="w-full h-full py-8 bg-c-black-06/65 px-14">
 
                 <div className="flex items-center justify-between">
                     <img src="/images/logo-white.png" alt="stream vibe logo" className="3xl:w-full lg:w-[165px] w-[150px]" />
                     <Link href="/">
-                        <span className="text-white flex gap-2">Back to Home <HomeIcon /></span>
+                        <span className="flex gap-2 text-white">Back to Home <HomeIcon /></span>
                     </Link>
                 </div>
 
@@ -51,7 +51,7 @@ const SidePage = ({ page, setPage }) => {
                                 className={`text-white text-3xl font-semibold`}
                             >Log In Page</h1>
 
-                            <p className="text-white/80 mt-10 text-base leading-7 mb-10">
+                            <p className="mt-10 mb-10 text-base leading-7 text-white/80">
                                 To access your account and take advantage of all the special features and services on our site,
                                 please log in with your personal information. If you do not have an account yet, you can sign up
                                 and enjoy our exclusive benefits.
@@ -73,7 +73,7 @@ const SidePage = ({ page, setPage }) => {
                                 className={`text-white text-3xl font-semibold`}
                             >Sign Up Page</h1>
 
-                            <p className="text-white/80 mt-10 text-base leading-7 mb-10">
+                            <p className="mt-10 mb-10 text-base leading-7 text-white/80">
                                 To access your account and take advantage of all the special features and services on our site,
                                 please log in with your personal information. If you do not have an account yet, you can sign up
                                 and enjoy our exclusive benefits.
